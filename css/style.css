@@ -1,14 +1,73 @@
+h1,
+h2 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p,
+a {
+  font-family: "Oxygen", sans-serif;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #192a56;
+  display: flex;
+}
+
+main {
+  background: #718093;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  text-decoration: none;
+  padding: 1rem;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.5rem;
+}
+
+.title {
+  margin: auto 0;
+}
+
 .characters {
   display: flex;
   flex-wrap: wrap;
-  background: #2c3e50;
+  /* background: #2c3e50; */
   justify-content: space-around;
 }
 
 .charcard {
   padding: 2rem;
   margin: 1rem;
-  width: 15rem;
-  height: 15rem;
-  background-color: lightgray;
+  width: 13rem;
+  height: 10rem;
+  background-color: #7f8fa6;
+  border-radius: 10%;
+}
+
+.fa-venus {
+  color: #725266;
+}
+
+.fa-mars {
+  color: #031c6e;
+}
+
+.wikilink {
+  text-decoration: none;
+  color: #192a56;
+}
+
+.wikilink:hover {
+  text-decoration: underline;
 }

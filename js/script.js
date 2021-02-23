@@ -15,7 +15,10 @@ function listChar(character) {
   let race;
   let gender;
   let link;
+  let born;
+  let died;
   // console.log(character[1]);
+  container.innerHTML = "";
 
   for (i = 0; i < 200; i++) {
     name = "";
@@ -39,12 +42,23 @@ function listChar(character) {
       console.log(character[i].wikiUrl);
       link = character[i].wikiUrl;
     }
+    born = "Unknown DoB";
+    if (character[i].birth) {
+      birth = character[i].birth;
+    }
+
+    died = "Unknown DoD";
+    if (character[i].death) {
+      died = character[i].death;
+    }
 
     container.innerHTML += `<div class="charcard">
-                              <h2>${name}</h2>
-                              <p>${race}</p>
-                              <p>${gender}</p>
-                              <a href="${link}">LOTR Wiki - ${name}</a>
-                              </div>`;
+                              <h2>${name} ${gender}</h2>
+                              <h4>${born} - ${died}</h4>
+                              <div class="flex">
+                                <b>${race}</b>
+                                <a class="wikilink" href="${link}">Wiki - ${name}</a>
+                              </div>  
+                            </div>`;
   }
 }
