@@ -1,0 +1,14 @@
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  background: #2c3e50;
+  justify-content: space-around;
+}
+
+.charcard {
+  padding: 2rem;
+  margin: 1rem;
+  width: 15rem;
+  height: 15rem;
+  background-color: lightgray;
+}
