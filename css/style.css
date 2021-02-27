@@ -1,3 +1,9 @@
+:root {
+  --background: #d7d7d7;
+  --header: #192a56;
+  --card: #ebebeb;
+}
+
 h1,
 h2 {
   font-family: "Ubuntu", sans-serif;
@@ -11,15 +17,16 @@ a {
 
 body {
   margin: 0;
+  background-image: url(/media/wp403994-wallpaper-lord-of-the-rings.jpg);
 }
 
 header {
-  background: #192a56;
+  background: var(--header);
   display: flex;
 }
 
-main {
-  background: #718093;
+#logo {
+  margin: 0;
 }
 
 .flex {
@@ -43,7 +50,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   /* background: #2c3e50; */
+  background: var(--background);
+  max-width: 85vw;
+  margin: auto;
   justify-content: space-around;
+}
+
+.contact {
+  background: var(--background);
+  max-width: 85vw;
+  margin: auto;
 }
 
 .charcard {
@@ -51,8 +67,10 @@ main {
   margin: 1rem;
   width: 13rem;
   height: 10rem;
-  background-color: #7f8fa6;
+  background-color: var(--card);
   border-radius: 10%;
+  text-decoration: none;
+  color: black;
 }
 
 .fa-venus {
@@ -70,4 +88,11 @@ main {
 
 .wikilink:hover {
   text-decoration: underline;
+}
+
+.chardetails {
+  width: 80vw;
+  background-color: var(--background);
+  margin: auto;
+  height: 100vh;
 }

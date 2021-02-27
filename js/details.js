@@ -17,8 +17,9 @@ fetch(url, {
 
 function createHtml(details) {
   detailContainer.innerHTML = ` <h1>${details.docs[0].name}</h1>
+                                <b>${details.docs[0].race}</b>
                                 <p>${details.docs[0].birth} - ${details.docs[0].death}</p>
-                                <b>${details.docs[0].race}</b>`;
+                                `;
 }
 
 // createHtml(data.docs)
