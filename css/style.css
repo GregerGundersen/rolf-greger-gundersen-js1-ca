@@ -20,8 +20,14 @@ body {
   background-image: url(/media/wp403994-wallpaper-lord-of-the-rings.jpg);
 }
 
+/* NAVIGATION + HEADER */
 header {
   background: var(--header);
+  display: flex;
+  height: 70px;
+}
+
+.logocontainer {
   display: flex;
 }
 
@@ -34,18 +40,40 @@ header {
   justify-content: space-between;
 }
 
-.nav {
+/* nav a {
   text-decoration: none;
   padding: 1rem;
   color: white;
   border: 1px solid white;
   font-size: 1.5rem;
+} */
+nav ul {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto 4rem auto auto;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  font-family: ubuntu, sans-serif;
+}
+
+nav a:hover {
+  border: 1px solid black;
 }
 
 .title {
-  margin: auto 0;
+  margin: auto;
 }
 
+/* NAVIGATION + HEADER END */
 .characters {
   display: flex;
   flex-wrap: wrap;
