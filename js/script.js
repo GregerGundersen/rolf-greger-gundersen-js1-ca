@@ -6,7 +6,14 @@ fetch("https://the-one-api.dev/v2/character", {
 })
   .then((response) => response.json())
   .then((data) => listChar(data.docs))
-  .catch((error) => console.log(error));
+  .catch(
+    (error) =>
+      (container.innerHTML = `<div class="error">
+                              <i class="fas fa-exclamation-triangle"></i>
+                              <p style="font-size:2rem;">Error</p>
+                              <p> ${error}</p>
+                              </div>`)
+  );
 
 const container = document.querySelector(".characters");
 
@@ -18,12 +25,13 @@ function listChar(character) {
   container.innerHTML = "";
 
   for (i = 0; i < 200; i++) {
-    if (character[i].birth && character[i].death) {
-      if (character[i].gender === "Female") {
-        gender = '<i class="fas fa-venus"></i>';
-      } else if (character[i].gender === "Male") {
-        gender = '<i class="fas fa-mars"></i>';
-      }
+    if (!character[i].birth && !character[i].death) {
+      continue;
+    }
+    if (character[i].gender === "Female") {
+      gender = '<i class="fas fa-venus"></i>';
+    } else if (character[i].gender === "Male") {
+      gender = '<i class="fas fa-mars"></i>';
     }
     container.innerHTML += `<a href="details.html?id=${character[i]._id}" class="charcard">
                               <h2>${character[i].name} ${gender}</h2>
