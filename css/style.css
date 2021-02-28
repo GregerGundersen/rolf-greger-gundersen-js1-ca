@@ -83,12 +83,61 @@ nav a:hover {
   margin: auto;
   justify-content: space-around;
 }
-
+/* CONTACT STYLING */
 .contact {
   background: var(--background);
-  max-width: 85vw;
+  max-width: 40vw;
   margin: auto;
+  padding: 2rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
+.contact h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+fieldset {
+  border: medium none;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.contact input {
+  width: 90%;
+  margin: 0 0 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.contact input:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+.contact button {
+  cursor: pointer;
+  width: 94%;
+  border: none;
+  background: var(--header);
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#nameError,
+#subjectError,
+#emailError,
+#addressError {
+  color: red;
+  font-size: 0.7rem;
+}
+/* CONTACT STYLING END */
 
 .charcard {
   padding: 2rem;
@@ -99,6 +148,7 @@ nav a:hover {
   border-radius: 10%;
   text-decoration: none;
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .fa-venus {
@@ -124,6 +174,8 @@ nav a:hover {
   background-color: var(--background);
   margin: 0 auto;
   height: 70vh;
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .chardetails h1 {

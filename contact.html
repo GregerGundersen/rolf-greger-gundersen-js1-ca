@@ -41,12 +41,26 @@
     </header>
     <main class="contact">
       <h2>Contact Us</h2>
-      <form action="get">
-        <input placeholder="name" />
-        <input placeholder="subject" />
-        <input placeholder="E-Mail" type="email" />
-        <input placeholder="Address" />
-        <button type="submit">Submit</button>
+      <form id="contactform" method="GET">
+        <fieldset>
+          <input id="name" placeholder="Your name here" />
+          <p id="nameError"></p>
+        </fieldset>
+        <fieldset>
+          <input id="address" placeholder="Your address here" />
+          <p id="addressError"></p>
+        </fieldset>
+        <fieldset>
+          <input id="email" placeholder="Your e-mail here" />
+          <p id="emailError"></p>
+        </fieldset>
+        <fieldset>
+          <input id="subject" placeholder="Subject" />
+          <p id="subjectError"></p>
+        </fieldset>
+        <fieldset>
+          <button type="submit">Submit</button>
+        </fieldset>
       </form>
       <script src="js/contact.js"></script>
     </main>
